@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim 24 Jayapura | Pizza Place Sales</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -18,12 +19,13 @@
     </header>
 
     <main>
+        <div class="title-page">
+            <h2>Dashboard</h2>
+        </div>
         <!-- Dashboard start -->
         <section class="container">
             <section class="breadcrumbs">
-                <div class="title-page">
-                    <h2>Dashboard</h2>
-                </div>
+                
                 <div class="filter-page">
                     <select id="filter-time">
                         <option value="">Alltime</option>
@@ -56,19 +58,20 @@
             </section>
 
             <section class="row">
-                <div class="regular">
-                    <h2>Quantity</h2>
-                    <h3 id="total-qty">0</h3>
+                <div class="regular" style="width: calc(33% - 20px); margin: 10px; border: 1px solid #ccc; padding: 20px; box-sizing: border-box; display: inline-block;">
+                  <h2>Quantity</h2>
+                  <h3 id="total-qty">0</h3>
                 </div>
-                <div class="regular">
-                    <h2>Average</h2>
-                    <h3 id="average-qty">0</h3>
+                <div class="regular" style="width: calc(33% - 20px); margin: 10px; border: 1px solid #ccc; padding: 20px; box-sizing: border-box; display: inline-block;">
+                  <h2>Average</h2>
+                  <h3 id="average-qty">0</h3>
                 </div>
-                <div class="regular">
-                    <h2>Stakeholder</h2>
-                    <h3 id="stackholder">0</h3>
+                <div class="regular" style="width: calc(33% - 20px); margin: 10px; border: 1px solid #ccc; padding: 20px; box-sizing: border-box; display: inline-block;">
+                  <h2>Stakeholder</h2>
+                  <h3 id="stackholder">0</h3>
                 </div>
-            </section>
+              </section>
+              
 
             <section class="row">
                 <div class="large">
@@ -98,8 +101,215 @@
             </section>
         </section>
         <!-- Dashboard end -->
-    </main>
 
+        <!-- Profil Tim -->
+        <div class="profil">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\ayunda.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Ayunda Wardhatul Fitrah</h2>
+                                <p class="description">Hidup adalah perjalanan, bukan <br>tujuan. karena kesuksesan sesungguhnya adalah menikmati prosesnya</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\nafisa.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Nafisa Alfi Sa'Diya</h2>
+                                <p class="description">Hidup tidak dapat diprediksi, <br>tetapi anda dapat memilih takdir Anda sendiri</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\fredian.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Fredian Septa Nugroho</h2>
+                                <p class="description">Tuhan akan memberikan senyuman dibalik kesedihan, dan akan memberikan harapan dibalik keputusasaan</p>
+    
+                                <a href="https://www.instagram.com/fredyan_s.n/"><button class="button">View More</button></a>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\naswa.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Andi Naswa Aprilia</h2>
+                                <p class="description">Kita bisa karna terbiasa,<br> jangan pernah menyerah untuk melakukan hal yang indah</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\azim.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">M. Abdul Azmi</h2>
+                                <p class="description">Singkat saja, <br>semua akan berlalu</p><br>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\nabila.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Nabila Aliefa Zahra</h2>
+                                <p class="description">Hidup itu pilihan, <br>jadi nikmati dan jalanin aja dah</p><br>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\rima.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Rima Rahmawati</h2>
+                                <p class="description">Pisau tumpul jika rajin diasah <br>akan tajam juga</p><br>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\atia.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Atia Syahbani</h2>
+                                <p class="description">Born to be a Master, <br>Forced to be a Fighter— <br>and still walk to be a Winner.</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\huznul.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Husznul Virbiansyah</h2>
+                                <p class="description">Kesulitan tidak akan mungkin mengalahkan kemudahan dua kali</p><br>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="assets\images\vany.png" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Vany Aulia Putri</h2>
+                                <p class="description">Tetap jalani dengan semangat <br> meski lebih enakan tidur</p><br>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile9.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Muhammad Rofi'I</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+    
+                                <div class="card-image">
+                                    <img src="images/profile9.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">D. Rayi Aditama</h2>
+                                <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur</p>
+    
+                                <button class="button">View More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </main>
+    
     <!-- Footer Start -->
     <footer>
         <div class="credit">
@@ -112,7 +322,11 @@
     <!-- ChartJs start -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
     <!-- Script -->
     <script src="js/main.js"></script>
+
 </body>
 </html>

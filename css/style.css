@@ -1,11 +1,10 @@
 /* Style Umum */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #000000, #6a0dad);
+  background-color: #1d2634;
   color: #ffffff;
-  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Navbar */
@@ -13,8 +12,8 @@ body {
   display: flex;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
+  justify-content: space-between;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
   position: relative; /* Menggunakan posisi relatif untuk menyelaraskan logo */
 }
 
@@ -112,6 +111,7 @@ main {
   width: calc(33.33% - 20px); /* 33.33% lebar dengan jarak antara elemen 20px */
   margin-bottom: 20px; /* Jarak bawah antara setiap elemen */
   text-align: center;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
 
 /* Atur gambar */
@@ -127,6 +127,7 @@ main {
 .large h2,
 .regular h3,
 .large h3 {
+  padding-top: 5px;
   margin: 0; /* Hapus margin bawaan */
 }
 
@@ -144,7 +145,238 @@ main {
   margin-bottom: 5px;
 }
 
+
+.charts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chart {
+  width: 49%;
+  margin: 10px;
+  background-color: #f2dede;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart h2 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.chart canvas {
+  margin-top: 20px; /* Add space above the canvas */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.large {
+
+  padding: 10px;
+  background-color: #263043;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  flex: 1 1 calc(30% - 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Menggunakan posisi relatif untuk mengatur posisi anak */
+  justify-content: center;
+}
+
+.large h2 {
+  margin: 0; /* Menghilangkan margin default */
+  position: absolute; /* Menggunakan posisi absolut */
+  top: 10px; /* Mengatur jarak dari atas */
+  left: 50%;
+  transform: translateX(-50%); /* Menengahkan secara horizontal */
+}
+
+.large canvas {
+  margin-top: 40px; /* Mengatur margin atas untuk memberi ruang pada teks h2 */
+}
+
+.container {
+  display: flex; /* Menggunakan flexbox untuk menyusun kotak-kotak */
+  justify-content: center; /* Memusatkan kotak-kotak secara horizontal */
+  gap: 5px; /* Mengatur jarak antar kotak menjadi lebih kecil */
+}
+
+.box {
+  padding: 20px; /* Mengatur padding, bisa disesuaikan sesuai kebutuhan */
+  border: 1px solid #ccc; /* Mengatur border */
+  border-radius: 5px; /* Membuat sudut kotak menjadi melengkung */
+  background-color: #fff; /* Mengatur warna latar belakang */
+  text-align: center; /* Mengatur teks agar berada di tengah */
+  margin: 0; /* Pastikan tidak ada margin tambahan */
+}
+
+.quantity-box {
+  /* Tambahkan gaya khusus jika diperlukan */
+}
+
+.average-box {
+  /* Tambahkan gaya khusus jika diperlukan */
+}
+
+
 /* Dashboard End */
+
+/* profil tim */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profil {
+  padding: 100px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #263043;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #263043;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #263043;
+}
+
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #263043;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #181f2b;
+}
+
+.swiper-navBtn{
+  color: #263043;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #181f2b;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #263043;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #181f2b;
+}
 
 /* Footer */
 footer {
@@ -166,7 +398,7 @@ footer .credit a:hover {
   color: #7d34b1;
 }
 
-/* Responsive Style */
+
 
 /* Responsif untuk Tablet */
 @media only screen and (max-width: 768px) {
@@ -222,3 +454,4 @@ footer .credit a:hover {
     margin-bottom: 10px; /* Memberikan jarak bawah pada filter */
   }
 }
+

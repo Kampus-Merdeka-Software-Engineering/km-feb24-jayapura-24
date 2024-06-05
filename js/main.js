@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
               label: 'Cluster Price',
               data: clusterData,
               borderWidth: 1,
-              backgroundColor: "purple"
+              backgroundColor: "#583cb3"
           }],
       },
       options: {
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
               label: 'Total Size',
               data: sizeData,
               borderWidth: 1,
-              backgroundColor: "Blue"
+              backgroundColor: "#2962ff"
           }],
       },
       options: {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
               label: 'Top 10 Pizza',
               data: dataTop10,
               borderWidth: 1,
-              backgroundColor: "Green"
+              backgroundColor: "#2e7d32",
           }],
       },
       options: {
@@ -81,12 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const chartLow10 = new Chart(ctxLow10, {
       type: 'bar',
       data: {
-          labels: labelLow10,
+          labels: labelLow10, 
           datasets: [{
               label: 'Lowest 10 Pizza',
               data: dataLow10,
               borderWidth: 1,
-              backgroundColor: "Red"
+              backgroundColor: "#d50000"
           }],
       },
       options: {
@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
   });
 
+
   const ctxCategory = document.getElementById('totalcategory');
   const chartCategory = new Chart(ctxCategory, {
       type: 'pie',
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
           datasets: [{
               label: 'Category Distribution',
               data: dataCategory,
-              backgroundColor: ["Red", "Blue", "Green", "Yellow", "Purple", "Orange"]
+              backgroundColor: ["#d50000", "#2962ff", "#2e7d32", "#ff6d00", "Purple", "Orange"]
           }],
       },
       options: {
@@ -117,8 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   position: 'top',
               },
           },
+          radius: '70%'
       },
-  });
+  }); 
 
   const ctxPenjualanPerBulan = document.getElementById('penjualanperbulan');
   const chartPenjualanPerBulan = new Chart(ctxPenjualanPerBulan, {
@@ -130,13 +132,13 @@ document.addEventListener("DOMContentLoaded", function () {
                   label: 'Quantity',
                   data: quantityData,
                   borderWidth: 1,
-                  backgroundColor: "Orange"
+                  backgroundColor: "#ff6d00"
               },
               {
                   label: 'Harga Pizza',
                   data: hargaPizzaData,
                   borderWidth: 1,
-                  backgroundColor: "Blue"
+                  backgroundColor: "#2962ff"
               }
           ],
       },
@@ -149,6 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
           },
       },
   });
+
+  
+
 
   loadJSON();
 
@@ -283,3 +288,35 @@ document.addEventListener("DOMContentLoaded", function () {
       chartPenjualanPerBulan.update();
   }
 });
+
+
+
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints:{
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+  });
