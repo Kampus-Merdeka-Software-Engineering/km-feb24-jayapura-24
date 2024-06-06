@@ -7,6 +7,7 @@
     <title>Tim 24 Jayapura | Pizza Place Sales</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
 </head>
 <body>
     <header>
@@ -99,6 +100,16 @@
                     <canvas id="penjualanperbulan"></canvas>
                 </div>
             </section>
+            <table id="order-list" class="display responsive bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date Order</th>
+                        <th>Pizza Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+            </table>
         </section>
         <!-- Dashboard end -->
 
@@ -319,6 +330,9 @@
     </footer>
     <!-- Footer end -->
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- ChartJs start -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -327,6 +341,10 @@
 
     <!-- Script -->
     <script src="js/main.js"></script>
+
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+
+
 
 </body>
 </html>

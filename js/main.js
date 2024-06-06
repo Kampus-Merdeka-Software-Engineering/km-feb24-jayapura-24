@@ -279,6 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
               low10Chart(resultData);
               categoryChart(resultData);
               penjualanPerBulanChart(resultData);
+              orderList(resultData);
 
               document.getElementById("total-qty").innerHTML = totalQty;
               document.getElementById("average-qty").innerHTML = averageQty.toFixed(2);
@@ -412,3 +413,24 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+
+  function orderList(resultData){
+    const table = new DataTable("#order-list", {
+      data: resultData,
+      columns: [
+        { data: "order_id" },
+        { data: "date" },
+        { data: "category" },
+        { data: "harga_pizza" },
+      ],
+      responsive: true,
+      destroy: true,
+      rowReorder: {
+         selector: 'td:nth-child(2)'
+     }
+    });
+     // table.destroy();
+     table.clear().rows.add(resultData).draw();
+         
+ }
