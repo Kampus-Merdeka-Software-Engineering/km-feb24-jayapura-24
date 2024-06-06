@@ -415,6 +415,12 @@ footer .credit a:hover {
   .large {
     width: calc(50% - 10px); /* Mengurangi lebar kotak pada layar tablet */
   }
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
 }
 
 /* Responsif untuk Ponsel */

@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let quantityData = [];
   let hargaPizzaData = [];
 
+  
   const ctx = document.getElementById('clusterChart');
   const chartCluster = new Chart(ctx, {
       type: 'bar',
@@ -26,10 +27,27 @@ document.addEventListener("DOMContentLoaded", function () {
           }],
       },
       options: {
+        plugins: {
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff",
+              },
+            },
+          },
           scales: {
               y: {
-                  beginAtZero: true,
+                  beginAtZero: true, 
+                ticks: {
+                  padding: 20,
+                  color: "#fff",
+                },
               },
+              x: {
+                ticks: {
+                    color: "#fff",
+                  },
+              }
           },
       },
   });
@@ -47,10 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
           }],
       },
       options: {
-          scales: {
-              y: {
-                  beginAtZero: true,
+        plugins: {
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff",
               },
+            },
+          },
+          scales: {
+            y: {
+                beginAtZero: true, 
+              ticks: {
+                padding: 20,
+                color: "#fff",
+              },
+            },
+            x: {
+              ticks: {
+                  color: "#fff",
+                },
+            }
           },
       },
   });
@@ -68,11 +103,28 @@ document.addEventListener("DOMContentLoaded", function () {
           }],
       },
       options: {
+        plugins: {
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff",
+              },
+            },
+          },
           indexAxis: 'y', // Mengatur sumbu x menjadi sumbu y
           scales: {
               x: { // Mengatur konfigurasi untuk sumbu y
                   beginAtZero: true,
+                  ticks: {
+                    color: "#fff",
+                  },
               },
+              y: {
+              ticks: {
+                padding: 20,
+                color: "#fff",
+              },
+            },
           },
       },
   });
@@ -90,11 +142,28 @@ document.addEventListener("DOMContentLoaded", function () {
           }],
       },
       options: {
+        plugins: {
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff",
+              },
+            },
+          },
           indexAxis: 'y', // Mengatur sumbu x menjadi sumbu y
           scales: {
-              x: { // Mengatur konfigurasi untuk sumbu y
-                  beginAtZero: true,
-              },
+            x: { // Mengatur konfigurasi untuk sumbu y
+                beginAtZero: true,
+                ticks: {
+                  color: "#fff",
+                },
+            },
+            y: {
+            ticks: {
+              padding: 20,
+              color: "#fff",
+            },
+          },
           },
       },
   });
@@ -116,6 +185,12 @@ document.addEventListener("DOMContentLoaded", function () {
           plugins: {
               legend: {
                   position: 'top',
+              },
+              legend: {
+                display: true,
+                labels: {
+                  color: "#fff",
+                },
               },
           },
           radius: '70%'
@@ -143,11 +218,28 @@ document.addEventListener("DOMContentLoaded", function () {
           ],
       },
       options: {
+            plugins: {
+            legend: {
+              display: true,
+              labels: {
+                color: "#fff",
+              },
+            },
+          },
           indexAxis: 'y', // Mengatur sumbu x menjadi sumbu y
           scales: {
-              x: { // Mengatur konfigurasi untuk sumbu y
-                  beginAtZero: true,
-              },
+            x: { // Mengatur konfigurasi untuk sumbu y
+                beginAtZero: true,
+                ticks: {
+                  color: "#fff",
+                },
+            },
+            y: {
+            ticks: {
+              padding: 20,
+              color: "#fff",
+                },
+            },
           },
       },
   });
