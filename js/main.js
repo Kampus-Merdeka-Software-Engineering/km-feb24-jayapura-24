@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
               acc[item.bulan] = { quantity: 0, harga_pizza: 0 };
           }
           acc[item.bulan].quantity += item.quantity;
-          acc[item.bulan].harga_pizza += item.harga_pizza;
+          acc[item.bulan].harga_pizza += parseInt(item.harga_pizza);
           return acc;
       }, {});
 

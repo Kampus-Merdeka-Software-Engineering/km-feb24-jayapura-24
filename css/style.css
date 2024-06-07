@@ -61,6 +61,7 @@ main {
   justify-content: center; /* Mengatur agar konten berada di tengah-tengah horizontal */
   align-items: center; /* Mengatur agar konten berada di tengah-tengah vertikal */
   margin-bottom: 20px; /* Memberi jarak bawah */
+  width: 100%;
 }
 
 .title-page {
@@ -101,6 +102,7 @@ main {
   gap: 20px;
   margin-bottom: 20px;
   justify-content: space-between; /* Menyusun elemen ke tengah secara horizontal */
+  width: 100%;
 }
 
 .regular,
@@ -217,7 +219,7 @@ main {
 }
 
 .container {
-  display: flex; /* Menggunakan flexbox untuk menyusun kotak-kotak */
+  /*display: flex;  Menggunakan flexbox untuk menyusun kotak-kotak */
   justify-content: center; /* Memusatkan kotak-kotak secara horizontal */
   gap: 5px; /* Mengatur jarak antar kotak menjadi lebih kecil */
 }
@@ -424,10 +426,11 @@ footer .credit a:hover {
 }
 
 /* Responsif untuk Ponsel */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 680px) {
   .container {
     width: 100%; /* Mengisi lebar layar ponsel */
     padding: 10px; /* Mengurangi padding pada layar ponsel */
+    display: block;
   }
 
   .row {
