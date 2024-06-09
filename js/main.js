@@ -1,3 +1,52 @@
+
+// Mendapatkan semua tautan dan bagian yang akan diamati
+const links = document.querySelectorAll('.link');
+const sections = document.querySelectorAll('article');
+
+// Fungsi untuk memperbarui tautan aktif
+function setActiveLink(id) {
+  links.forEach(link => {
+    if (link.dataset.id === id) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+// Event listener untuk tautan
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const targetId = link.dataset.id;
+    const targetSection = document.getElementById(targetId);
+
+    // Scroll ke bagian yang dituju
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Set tautan aktif
+    setActiveLink(targetId);
+  });
+});
+
+// Membuat observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      setActiveLink(entry.target.id);
+    }
+  });
+}, {
+  threshold: 0.5 // Memastikan 50% bagian terlihat sebelum dianggap berada di tampilan
+});
+
+// Mengamati setiap bagian
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   let labels = ["P1", "P2", "P3"];
   let clusterData = [0, 0, 0];

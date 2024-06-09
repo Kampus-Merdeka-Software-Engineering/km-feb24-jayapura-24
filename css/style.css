@@ -1,79 +1,113 @@
 /* Style Umum */
-
+*::after,
+*::before,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 body {
 
   margin: 0;
-
   padding: 0;
-
   background-color: #1d2634;
-
   color: #ffffff;
-
   font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 
 }
 
 
 
-/* Navbar */
 
-.navbar {
-
+.container {
   display: flex;
-
-  align-items: center;
-
-  padding: 1.4rem 7%;
-
-  justify-content: space-between;
-
-  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
-
-  position: relative; /* Menggunakan posisi relatif untuk menyelaraskan logo */
-
 }
 
 
-
-.navbar .navbar-team {
-
-  font-size: 3rem;
-
-  font-weight: 700;
-
+/* sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3em;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #263043;
+  padding: 2em 1em;
+  color: #fdfcff;
+}
+.sidebar-logo text-center img{
+  border-radius: 50%;
+ 
+}
+.content {
+  margin-left: 200px;
+  width: 100%;
   color: #ffffff;
-
-  font-style: italic;
-
+  padding-block: 2em;
 }
 
-
-
-.navbar .navbar-team span {
-
-  color: #7d34b1;
-
+.text-center {
+  text-align: center;
 }
 
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
 
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  padding-block: 0.5em;
+  padding-inline: 1em;
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: transparent;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+}
 
-.navbar img {
+.link:hover,
+.link.active {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 
-  max-height: 80px; /* Menentukan tinggi maksimum logo */
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 
-  width: auto; /* Lebar disesuaikan agar rasio aspek tetap terjaga */
+  color: white;
+}
 
-  position: absolute; /* Menetapkan posisi absolut untuk logo */
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+}
 
-  top: 50%; /* Menempatkan logo di bagian atas navbar */
-
-  right: 1.4rem; /* Menempatkan logo di sisi kanan navbar */
-
-  transform: translateY(-50%); /* Menggeser logo ke atas agar berada di tengah */
-
-  border-radius: 50px;
-
+.header-logo img {
+  width: 80px;
+  border-radius:50%;
+ 
 }
 
 
@@ -144,11 +178,11 @@ main {
 
 
 
-.filter-page {
+/* .filter-page {
 
   /*margin-left: 20px;  Memberi jarak kiri antara filter-page dengan title-page */
 
-}
+/* } */ 
 
 
 
@@ -258,9 +292,7 @@ main {
 
 .large h2,
 
-.regular h3,
-
-.large h3 {
+.regular h3 {
 
   padding-top: 5px;
 
@@ -293,6 +325,7 @@ main {
 .large h2 {
 
   margin-bottom: 5px;
+  font-size: 20px;
 
 }
 
@@ -354,23 +387,6 @@ main {
 
 
 
-.container {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 10px;
-
-  padding: 10px;
-
-}
-
-
-
-
-
-
 
 .container {
 
@@ -384,6 +400,7 @@ main {
 
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 
+  justify-content: center;
 }
 
 
@@ -435,20 +452,13 @@ main {
 .large canvas {
 
   margin-top: 40px; /* Mengatur margin atas untuk memberi ruang pada teks h2 */
+  
 
 }
 
 
 
-.container {
 
-  /*display: flex;  Menggunakan flexbox untuk menyusun kotak-kotak */
-
-  justify-content: center; /* Memusatkan kotak-kotak secara horizontal */
-
-  gap: 5px; /* Mengatur jarak antar kotak menjadi lebih kecil */
-
-}
 
 
 
@@ -470,19 +480,19 @@ main {
 
 
 
-.quantity-box {
+/* .quantity-box {
 
   /* Tambahkan gaya khusus jika diperlukan */
 
-}
+ 
 
 
 
-.average-box {
+/* .average-box {
 
   /* Tambahkan gaya khusus jika diperlukan */
 
-}
+/* } */ 
 
 
 
@@ -490,33 +500,71 @@ main {
 
 /* Dashboard End */
 
+/* About */
+#about {
+  padding-block: 2.5em;
+  background-color: #263043;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-header {
+  text-align: center;
+  flex-direction: column;
+}
+
+.about-content {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "col-1 col-2"
+    "col-3 col-4";
+  gap: 1em;
+  padding: 20px;
+}
+
+.about-column {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.col-1 {
+  grid-area: col-1;
+}
+.col-2 {
+  grid-area: col-2;
+}
+.col-3 {
+  grid-area: col-3;
+}
+.col-4 {
+  grid-area: col-4;
+}
 
 
 /* profil tim */
 
-*{
-
-  margin: 0;
-
-  padding: 0;
-
-  box-sizing: border-box;
-
+.team-header {
+  flex-direction: column;
+  text-align: center;
 }
-
-
-
 .profil {
 
   padding: 100px;
 
   min-height: 50vh;
 
-  display: flex;
-
   align-items: center;
 
   justify-content: center;
+  
 
 }
 
@@ -766,14 +814,58 @@ main {
 
 /* Footer */
 
-footer {
+.footer {
 
   text-align: center;
 
-  padding: 3rem 0;
-
   background-color: rgba(1, 1, 1, 0.8);
 
+  padding-top: 40px;
+
+  position: relative;
+
+  bottom: o;
+
+  width: 100%;
+ 
+ color: #ffffff;
+
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  margin: 20px;
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-section p, .footer-section ul {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+ 
 }
 
 
@@ -781,6 +873,9 @@ footer {
 footer .credit {
 
   font-size: 0.8rem;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
 
 }
 
@@ -818,6 +913,24 @@ footer .credit a:hover {
 
     padding: 15px; /* Mengurangi padding pada layar tablet */
 
+  }
+  .sidebar {
+    width: 65px;
+    padding: 0;
+    align-items: center;
+  }
+
+  .sidebar-links {
+    margin: auto 0;
+  }
+
+  .link p,
+  .sidebar-logo {
+    display: none;
+  }
+
+  .content {
+    margin-left: 55px;
   }
 
 
