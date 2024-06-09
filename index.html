@@ -8,22 +8,59 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    
+    <!-- cdn fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
-    <header>
+    <div class="container">
         <!-- Navbar Start -->
-        <nav class="navbar">
-            <a href="#" class="navbar-team">Pizza<span>Place</span>Sales</a>
-            <img src="assets/images/Logo Team.jpg" alt="Logo">
-        </nav>
+        <aside class="sidebar">
+            <div class="sidebar-logo text-center">
+              <img
+                src="./assets/images/Logo Team.jpg"
+                width="60px"
+                height="60px"
+                alt="logo"
+              />
+              <h1>Team 24 <span class="jayapura">Jayapura</span></h1>
+            </div>
+            <div class="sidebar-links">
+              <div class="link dashboard active" data-id="dashboard">
+                <i class="fa-solid fa-house"></i>
+                <p>Dashboard</p>
+              </div>
+              <div class="link about" data-id="about">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>About</p>
+              </div>
+              <div class="link team" data-id="team">
+                <i class="fa-solid fa-user"></i>
+                <p>Team</p>
+              </div>
+            </div>
+          </aside>
         <!-- Navbar end -->
-    </header>
 
-    <main>
-        <div class="title-page">
-            <h2>Dashboard</h2>
-        </div>
-        <!-- Dashboard start -->
+<!-- Dashboard -->
+    <main class="content">
+        <article class="title-page" id="dashboard">
+            <header>
+                <div class="header-title">
+                    <h1 class="title">Welcome Guys!</h1>
+                    <p>This is Jayapura24K Pizza Sales</p>
+                </div>
+                <div class="header-logo">
+                    <img src="./assets/images/Logo Team.jpg" alt="">
+                </div>
+
+            </header>
         <section class="container">
             <section class="breadcrumbs">
                 
@@ -100,7 +137,8 @@
                     <canvas id="penjualanperbulan"></canvas>
                 </div>
             </section>
-            <table id="order-list" class="display responsive bordered" style="width:100%">
+
+            <table id="order-list" class="display responsive bordered" style="width:100%" font-size="30px">
                 <thead>
                     <tr>
                         <th>Order ID</th>
@@ -111,9 +149,67 @@
                 </thead>
             </table>
         </section>
+        </article>
         <!-- Dashboard end -->
 
+        <!-- About  -->
+          <article id="about">
+          <header class="about-header">
+            <h1 class="title">About Capstone</h1>
+            <p class="subtitle">
+              Our Expert team is made up of creatives with technical know-how,
+              <br />
+              strategists who think outside the box, and developers who push
+              innovation.
+            </p>
+          </header>
+          <div class="about-content">
+            <div class="about-column col-1">
+              <h4>Business Understanding</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, illum quae! Animi excepturi fugit repellendus a
+                nihil, commodi voluptate quibusdam.
+              </p>
+            </div>
+            <div class="about-column col-2">
+              <h4>Background</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, illum quae! Animi excepturi fugit repellendus a
+                nihil, commodi voluptate quibusdam.
+              </p>
+            </div>
+            <div class="about-column col-3">
+              <h4>Problem Statement</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, illum quae! Animi excepturi fugit repellendus a
+                nihil, commodi voluptate quibusdam.
+              </p>
+            </div>
+            <div class="about-column col-4">
+              <h4>Objective</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur, illum quae! Animi excepturi fugit repellendus a
+                nihil, commodi voluptate quibusdam.
+              </p>
+            </div>
+          </div>
+        </article>
+
         <!-- Profil Tim -->
+        <article class="profil" id="team">
+            <header class="team-header">
+                <h1 class="title">Meet Our Team</h1>
+                <p class="subtitle">
+                  Our Expert team is made up of creatives with technical know-how,
+                  <br />
+                  strategists who think outside the box, and developers who push
+                  innovation.
+                </p>
+              </header>
         <div class="profil">
             <div class="slide-container swiper">
                 <div class="slide-content">
@@ -319,10 +415,34 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+        </article>
     </main>
+</div>
     
     <!-- Footer Start -->
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+         <div class="footer-section">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, accusantium totam eos voluptates ut quas.</p>
+         </div>
+         <div clas="footer-section">
+            <h4>Capstone Link</h4>
+            <ul>
+                <li><a target="_blank" href="https://docs.google.com/spreadsheets/d/1fDAaINYGeRf2vwyn2FdJSqgbPiiVZmkF/edit?usp=sharing&ouid=117372351754311651407&rtpof=true&sd=true">Dataset</a></li>
+                <li><a target="_blank" href="https://lookerstudio.google.com/reporting/206fbfbc-fde5-4e4c-a1be-17aec4734c09/page/6hFvD/edit">Looker Studio</a></li>
+                <li><a target="_blank" href="https://www.canva.com/design/DAGCxsWGn0g/WlB2L6xoD4cgY934K2hWTw/edit?utm_content=DAGCxsWGn0g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Picth Deck</a></li>
+                <li><a target="_blank" href="https://classroom.github.com/a/Be2xh6sm">GitHub</a></li>
+            </ul>
+         </div>
+         <div class="footer-section"></div>
+         <h4>Support By</h4>
+         <ul class="footer-logo">
+            <li><a target="_blank" href="https://revou.co/"> <img src="assets\images\revou.png" alt="RevoU" width="100px" height="50px"></a></li>
+            <li><a target="_blank" href="https://www.kemdikbud.go.id/"> <img src="assets\images\dikbud.png" alt="Kemendikbud" width="100px" height="50px"></a></li>
+            <li><a target="_blank" href="https://kampusmerdeka.kemdikbud.go.id/program/studi/syarat-ketentuan"> <img src="assets\images\merdeka.png" alt="kampusmerdeka" width="100px" height="50px"></a></li>
+         </ul>
+        </div>
         <div class="credit">
             <p>Created by <a href="">JayaPura24Team</a>. | &copy; 2024.</p>
             <p><a href="mailto:team24.jayapura@gmail.com">team24.jayapura@gmail.com</a></p>
